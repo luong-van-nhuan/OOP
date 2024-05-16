@@ -5,9 +5,8 @@ public class RunMain {
 
     public static void main(String[] args) {
         List<Student> students = new ArrayList<Student>();
-        List<BangDiemMonHoc> bangDiem = new ArrayList<>();
+        List<Subject> subjects = new ArrayList<>();
         Student student = new Student();
-        StudentManagement studentManagement = new StudentManagement();
         int chon = 0;
         do {
             System.out.println("=== MENU ===");
@@ -23,17 +22,16 @@ public class RunMain {
             switch (chon) {
                 case 1:
                     student.nhap();
-                    students.add(student);
                     break;
                 case 2:
                     break;
                 case 3:
-                    student.diemTB();
+                    System.out.println("Điểm trung bình của sinh viên có mã số " + student.getMaSV() + " là " + student.diemTB());
                     break;
                 case 4:
                     break;
                 case 5:
-                    student.xuat();
+
                     break;
                 case 0:
                     System.out.println("Tạm biệt");

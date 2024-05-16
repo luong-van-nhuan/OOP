@@ -1,18 +1,18 @@
 
 import java.util.Scanner;
 
-public class BangDiemMonHoc {
+public class Subject {
     private String tenMH;
     private String maMH;
     private float diemSo;
 
-    public BangDiemMonHoc(float diemSo, String maMH, String tenMH) {
+    public Subject(float diemSo, String maMH, String tenMH) {
         this.diemSo = diemSo;
         this.maMH = maMH;
         this.tenMH = tenMH;
     }
 
-    public BangDiemMonHoc() {
+    public Subject() {
     }
 
     public float getDiemSo() {
@@ -38,12 +38,6 @@ public class BangDiemMonHoc {
     public void setTenMH(String tenMH) {
         this.tenMH = tenMH;
     }
-
-    public static void title() {
-        String line = String.format("%-20s%-20s%-20s", "Tên môn học", "Mã môn học", "Điểm số");
-        System.out.println(line);
-    }
-
     public void nhap() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên môn học: ");
@@ -53,10 +47,6 @@ public class BangDiemMonHoc {
         System.out.println("Nhập điểm số: ");
         diemSo = sc.nextFloat();
         sc.nextLine();
-    }
-    public void xuat() {
-        String line = String.format("%-20s%-20s%-20s", tenMH, maMH, diemSo + "");
-        System.out.println(line);
     }
 
 }
