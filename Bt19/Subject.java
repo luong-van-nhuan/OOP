@@ -1,52 +1,51 @@
-
 import java.util.Scanner;
 
 public class Subject {
-    private String tenMH;
-    private String maMH;
-    private float diemSo;
+    private String tenMonHoc;
+    private String maMonHoc;
+    private double diemSo;
 
-    public Subject(float diemSo, String maMH, String tenMH) {
+    public Subject(String tenMonHoc, String maMonHoc, double diemSo) {
+        this.tenMonHoc = tenMonHoc;
+        this.maMonHoc = maMonHoc;
         this.diemSo = diemSo;
-        this.maMH = maMH;
-        this.tenMH = tenMH;
     }
 
     public Subject() {
+
     }
 
-    public float getDiemSo() {
+    public double getDiemSo() {
         return diemSo;
     }
 
-    public void setDiemSo(float diemSo) {
+    public void setDiemSo(double diemSo) {
         this.diemSo = diemSo;
     }
 
-    public String getMaMH() {
-        return maMH;
+    public String getMaMonHoc() {
+        return maMonHoc;
     }
 
-    public void setMaMH(String maMH) {
-        this.maMH = maMH;
+    public void setMaMonHoc(String maMonHoc) {
+        this.maMonHoc = maMonHoc;
     }
 
-    public String getTenMH() {
-        return tenMH;
+    public String getTenMonHoc() {
+        return tenMonHoc;
     }
 
-    public void setTenMH(String tenMH) {
-        this.tenMH = tenMH;
+    public void setTenMonHoc(String tenMonHoc) {
+        this.tenMonHoc = tenMonHoc;
     }
-    public void nhap() {
+    public void nhap(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên môn học: ");
-        tenMH = sc.nextLine();
+        tenMonHoc = sc.nextLine();
         System.out.println("Nhập mã môn học: ");
-        maMH = sc.nextLine();
+        maMonHoc = sc.nextLine();
         System.out.println("Nhập điểm số: ");
-        diemSo = sc.nextFloat();
+        diemSo = sc.nextDouble();
         sc.nextLine();
     }
-
 }
