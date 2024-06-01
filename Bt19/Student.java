@@ -59,7 +59,7 @@ public class Student {
         System.out.println("Nhập mã sinh viên: ");
         String maSV = sc.nextLine();
         Subject subject = new Subject();
-        if(tenSV.equals(getTenSV()) && maSV.equals(getMaSV())){
+        if(getTenSV().equals(tenSV) && getMaSV().equals(maSV)){
             subject.nhap();
             subjects.add(subject);
         }
