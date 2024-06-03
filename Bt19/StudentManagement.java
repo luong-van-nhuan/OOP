@@ -82,7 +82,13 @@ public class StudentManagement {
             public int compare(Student o1, Student o2) {
                 int xepTheoTen = o1.getTenSV().compareTo(o2.getTenSV());
                 if (o1.getTenSV().equals(o2.getTenSV())) {
-                    return(int) (o2.tinhDiemTB() - o1.tinhDiemTB());
+                    if (o2.tinhDiemTB() - o1.tinhDiemTB() > 0) {
+                        return 1;
+                    } else if (o2.tinhDiemTB() - o1.tinhDiemTB() < 0) {
+                        return -1;
+                    } else {
+                        return 0;
+                    }
                 }
                 return xepTheoTen;
             }

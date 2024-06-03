@@ -33,7 +33,7 @@ public class RunMain {
                 case 5:
                     sm.sapXepTangDanTheoTenGiamDanTheoDiem();
                     student.xuat();
-                    student.tinhDiemTB();
+                    System.out.println("Điểm trung bình " + student.tinhDiemTB());
                     break;
                 case 0:
                     System.out.println("Good bye");
