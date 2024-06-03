@@ -15,12 +15,12 @@ public class Subject {
 
     }
 
-    public double getDiemSo() {
-        return diemSo;
+    public String getTenMonHoc() {
+        return tenMonHoc;
     }
 
-    public void setDiemSo(double diemSo) {
-        this.diemSo = diemSo;
+    public void setTenMonHoc(String tenMonHoc) {
+        this.tenMonHoc = tenMonHoc;
     }
 
     public String getMaMonHoc() {
@@ -31,13 +31,14 @@ public class Subject {
         this.maMonHoc = maMonHoc;
     }
 
-    public String getTenMonHoc() {
-        return tenMonHoc;
+    public double getDiemSo() {
+        return diemSo;
     }
 
-    public void setTenMonHoc(String tenMonHoc) {
-        this.tenMonHoc = tenMonHoc;
+    public void setDiemSo(double diemSo) {
+        this.diemSo = diemSo;
     }
+
     public void nhap(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên môn học: ");

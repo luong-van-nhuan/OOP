@@ -7,13 +7,15 @@ public class Student {
     private String ngayThangNam;
     private ArrayList<Subject> subjects;
 
-    public Student(String tenSV, String maSV, String ngayThangNam) {
+    public Student(String tenSV, String maSV, String ngayThangNam, ArrayList<Subject> subjects) {
         this.tenSV = tenSV;
         this.maSV = maSV;
         this.ngayThangNam = ngayThangNam;
+        this.subjects = subjects;
     }
 
     public Student() {
+        this.subjects = new ArrayList<>();
     }
 
     public String getTenSV() {
@@ -39,7 +41,10 @@ public class Student {
     public void setNgayThangNam(String ngayThangNam) {
         this.ngayThangNam = ngayThangNam;
     }
-
+    public void xuat(){
+        System.out.println("Tên sinh viên: " + tenSV);
+        System.out.println("Mã sinh viên: " + maSV);
+    }
     public void nhap(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhập tên sinh viên: ");
@@ -52,18 +57,17 @@ public class Student {
     public void danhSachMonHoc(Subject sb){
         this.subjects.add(sb);
     }
-    public void themDiem(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Nhập tên sinh viên: ");
-        String tenSV = sc.nextLine();
-        System.out.println("Nhập mã sinh viên: ");
-        String maSV = sc.nextLine();
-        Subject subject = new Subject();
-        if(getTenSV().equals(tenSV) && getMaSV().equals(maSV)){
-            subject.nhap();
-            subjects.add(subject);
+    public double tinhDiemTB(){
+        if(subjects.isEmpty()){
+            System.out.println("Danh sách rỗng");
+            return 0;
+        }else {
+            double sum = 0;
+            for (Subject subject : subjects) {
+                sum += subject.getDiemSo();
+            }
+            return sum / subjects.size();
         }
-
     }
 
 }
